@@ -1,4 +1,4 @@
-program Project1;
+program DelphiDemo1;
 
 uses
   System.StartUpCopy,

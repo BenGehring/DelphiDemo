@@ -1,0 +1,52 @@
+unit uniConstants;
+
+interface
+
+uses SysUtils;
+
+const
+    strOverview = '';
+    strWebService = '';
+    strWebServiceList = '';
+    strDatabase = '';
+    strFutureUse = '';
+
+type
+TConstants = class
+  private
+
+  public
+  Function GetOverviewText() : string;
+  Function GetWebServiceText() : string;
+  Function GetWebServiceListText() : string;
+  Function GetDatabaseText() : string;
+  Function GetFutureUseText() : string;
+end;
+
+implementation
+Function TConstants.GetOverviewText: string;
+begin
+  result:= strOverview;
+end;
+
+Function TConstants.GetWebServiceText: string;
+begin
+  result:= strOverview;
+end;
+
+Function TConstants.GetWebServiceListText: string;
+begin
+  result:= strOverview;
+end;
+
+Function TConstants.GetDatabaseText: string;
+begin
+  result:= strOverview;
+end;
+
+Function TConstants.GetFutureUseText: string;
+begin
+  result:= strOverview;
+end;
+
+end.

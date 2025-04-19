@@ -1,0 +1,67 @@
+unit uniGui;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.StdCtrls, uniConstants;
+
+type
+  TfrmMain = class(TForm)
+    menMain: TMainMenu;
+    meiFile: TMenuItem;
+    meiExit: TMenuItem;
+    gbxMenu: TGroupBox;
+    gbxDescription: TGroupBox;
+    gbxButtonGroup: TGroupBox;
+    rbnOverview: TRadioButton;
+    rbnWebservice: TRadioButton;
+    rbnWebServiceList: TRadioButton;
+    rbnDatabase: TRadioButton;
+    rbnFutureUser: TRadioButton;
+    memDescription: TMemo;
+    procedure Exit(Sender: TObject);
+    procedure rbnOverviewClick(Sender: TObject);
+    procedure rbnWebserviceClick(Sender: TObject);
+    procedure rbnWebServiceListClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmMain: TfrmMain;
+  Constants: TConstants;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmMain.Exit(Sender: TObject);
+begin
+  Application.Terminate;
+end;
+
+procedure TfrmMain.rbnOverviewClick(Sender: TObject);
+begin
+  Constants := TConstants.Create();
+  memDescription.Lines.Clear;
+  memDescription.Text := Constants.GetOverviewText;
+end;
+
+procedure TfrmMain.rbnWebserviceClick(Sender: TObject);
+begin
+  Constants := TConstants.Create();
+  memDescription.Lines.Clear;
+  memDescription.Text := Constants.GetOverviewText;
+end;
+
+procedure TfrmMain.rbnWebServiceListClick(Sender: TObject);
+begin
+  Constants := TConstants.Create();
+  memDescription.Lines.Clear;
+  memDescription.Text := Constants.GetOverviewText;
+end;
+
+end.

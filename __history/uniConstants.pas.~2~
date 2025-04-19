@@ -1,0 +1,9 @@
+unit uniConstants;
+
+interface
+
+uses SysUtils;
+
+implementation
+
+end.

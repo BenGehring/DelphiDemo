@@ -1,0 +1,52 @@
+unit uniConstants;
+
+interface
+
+uses SysUtils;
+
+const
+    strOverview = '''This demo application is to ''';
+    strWebService = '''This demo application is to ''';
+    strWebServiceList '''This demo application is to ''';
+    strDatabase = '''This demo application is to ''';
+    strFutureUse = '''This demo application is to ''';
+
+type
+TConstants = class
+  private
+
+  public
+  Function GetOverviewText() : string;
+  Function GetWebServiceText() : string;
+  Function GetWebServiceListText() : string;
+  Function GetDatabaseText() : string;
+  Function GetFutureUseText() : string;
+end;
+
+implementation
+Function TConstants.GetOverviewText: string;
+begin
+  result:= strOverview;
+end;
+
+Function TConstants.GetWebServiceText: string;
+begin
+  result:= strWebService;
+end;
+
+Function TConstants.GetWebServiceListText: string;
+begin
+  result:= strWebServiceList;
+end;
+
+Function TConstants.GetDatabaseText: string;
+begin
+  result:= strDatabase;
+end;
+
+Function TConstants.GetFutureUseText: string;
+begin
+  result:= strFutureUse;
+end;
+
+end.

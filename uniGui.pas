@@ -4,7 +4,8 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.StdCtrls, uniConstants;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.StdCtrls, uniConstants, uniDatabase, uniWebService,
+  uniWebServiceList;
 
 type
   TfrmMain = class(TForm)
@@ -20,12 +21,14 @@ type
     rbnDatabase: TRadioButton;
     rbnFutureUser: TRadioButton;
     memDescription: TMemo;
+    btnViewForm: TButton;
     procedure Exit(Sender: TObject);
     procedure rbnOverviewClick(Sender: TObject);
     procedure rbnWebserviceClick(Sender: TObject);
     procedure rbnWebServiceListClick(Sender: TObject);
     procedure rbnDatabaseClick(Sender: TObject);
     procedure rbnFutureUserClick(Sender: TObject);
+    procedure btnViewFormClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -39,6 +42,23 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrmMain.btnViewFormClick(Sender: TObject);
+begin
+  if rbnOverview.Focused then
+
+  if rbnWebService.Focused then
+    frmWebService.ShowModal;
+
+  if rbnWebServiceList.Focused then
+    frmWebServiceList.ShowModal;
+
+  if rbnDatabase.Focused then
+    frmDatabase.ShowModal;
+
+  if rbnFutureUser.Focused then
+
+end;
 
 procedure TfrmMain.Exit(Sender: TObject);
 begin

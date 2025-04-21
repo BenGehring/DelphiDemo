@@ -1,7 +1,7 @@
-object frmMain: TfrmMain
+object frmWebServiceList: TfrmWebServiceList
   Left = 0
   Top = 0
-  Caption = 'Main Form'
+  Caption = 'Web Service List'
   ClientHeight = 441
   ClientWidth = 624
   Color = clBtnFace

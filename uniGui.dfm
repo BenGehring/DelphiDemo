@@ -20,7 +20,6 @@ object frmMain: TfrmMain
     Align = alLeft
     Caption = 'Menu'
     TabOrder = 0
-    ExplicitHeight = 105
     object rbnOverview: TRadioButton
       Left = 16
       Top = 24
@@ -81,6 +80,15 @@ object frmMain: TfrmMain
       Width = 427
       Height = 54
       TabOrder = 0
+      object btnViewForm: TButton
+        Left = 336
+        Top = 16
+        Width = 75
+        Height = 25
+        Caption = 'View'
+        TabOrder = 0
+        OnClick = btnViewFormClick
+      end
     end
     object memDescription: TMemo
       Left = 2
